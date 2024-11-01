@@ -32,11 +32,30 @@ class ListNode {
   int val;
   ListNode next;
 
-      ListNode() {}
+  ListNode() {
+  }
 
-      ListNode(int val) { this.val = val; }
+  ListNode(int val) {
+    this.val = val;
+  }
 
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+  ListNode(int val, ListNode next) {
+    this.val = val;
+    this.next = next;
+  }
+
+  @Override
+  public String toString() {
+    final StringBuffer sb = new StringBuffer("[");
+    ListNode aux = this;
+    while(aux != null) {
+      sb.append("," + aux.val);
+      aux = aux.next;
+    }
+    sb.append(']');
+    if(sb.length() > 2) sb.replace(1, 2, "");
+    return sb.toString();
+  }
 }
 
 class AddTwoNumbers02Test {
@@ -58,7 +77,7 @@ class AddTwoNumbers02Test {
 //    b1 = new ListNode(6, b1);
 //    b1 = new ListNode(4, b1);
 
-
+    String expected = "[8,0,7]";
     var newList = AddTwoNumbers02.addTwoNumber(l1, b1);
     Assertions.assertEquals(expected, newList.toString());
   }
@@ -87,11 +106,9 @@ class AddTwoNumbers02Test {
     b2.next = b3;
     b3.next = b4;
 
+    String expected = "[8,9,9,9,0,0,0,1]";
     var newList = AddTwoNumbers02.addTwoNumber(l1, b1);
-    while (newList != null){
-      System.out.println(newList.val);
-      newList = newList.next;
-    }
+    Assertions.assertEquals(expected, newList.toString());
   }
 
 }
