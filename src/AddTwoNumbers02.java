@@ -8,24 +8,50 @@ public class AddTwoNumbers02 {
 
   public static ListNode addTwoNumber(ListNode l1, ListNode l2) {
     ListNode Node = null;
+    ListNode nodeAux = null;
     int remnant = 0, sum=0, sumTotal=0;
 
 
     ListNode listAux = l1;
-    while (listAux != null) {
+    while (listAux != null || l2 != null) {
       // aqui você adiciona na Node
       // value = (listAux.val + l2.val) % 10
       // sobra = (listAux.val + l2.val) / 10 aqui é divisão
-      int result
-      sum = listAux.val + l2.val;
-      sumTotal = sum % 10 + remnant;
-      remnant = sum > 9 ? 1:0;
-      // Add na lista de retorno
-      Node = new ListNode(sumTotal, Node);
+      int A = 0, B = 0;
+      if (listAux != null) {
+        A = listAux.val;
+        listAux = listAux.next;
+      }
 
-      listAux = listAux.next;
-      l2 = l2.next;
+      if (l2 != null) {
+        B = l2.val;
+        l2 = l2.next;
+      }
+
+      sum = A + B;
+      sumTotal = (sum % 10 + remnant) % 10;
+      remnant = (sum + remnant > 9) ? 1:0;
+      // Add na lista de retorno
+
+
+      //Node = new ListNode(sumTotal, Node);
+      while (Node != null) {
+        nodeAux = Node;
+        Node = Node.next;
+      }
+
+      if (nodeAux != null) {
+        nodeAux.next = new ListNode(sumTotal);
+        Node = nodeAux;
+      } else {
+        Node = new ListNode(sumTotal);
+      }
     }
+
+    if (remnant == 1) {
+      nodeAux = new ListNode(remnant, Node);
+    }
+
     return Node;
   }
 
@@ -43,7 +69,7 @@ class ListNode {
 }
 
 class AddTwoNumbers02Test {
-  @Test
+
   void testAddTwoNumber(){
     ListNode l1 = new ListNode(2);
     ListNode l2 = new ListNode(4);
@@ -88,6 +114,7 @@ class AddTwoNumbers02Test {
   public void listNode3() {
     ListNode l1 = new ListNode(0);
   }
+  @Test
   public void listNode4() {
     ListNode l1 = new ListNode(9);
     ListNode l2 = new ListNode(9);
@@ -102,15 +129,20 @@ class AddTwoNumbers02Test {
     l4.next = l5;
     l5.next = l6;
     l6.next = l7;
-  }
-  public void listNode5() {
-    ListNode l1 = new ListNode(9);
-    ListNode l2 = new ListNode(9);
-    ListNode l3 = new ListNode(9);
-    ListNode l4 = new ListNode(9);
-    l1.next = l2;
-    l2.next = l3;
-    l3.next = l4;
+
+    ListNode b1 = new ListNode(9);
+    ListNode b2 = new ListNode(9);
+    ListNode b3 = new ListNode(9);
+    ListNode b4 = new ListNode(9);
+    b1.next = b2;
+    b2.next = b3;
+    b3.next = b4;
+
+    var newList = AddTwoNumbers02.addTwoNumber(l1, b1);
+    while (newList != null){
+      System.out.println(newList.val);
+      newList = newList.next;
+    }
   }
 
   public void expectedListNode() {
