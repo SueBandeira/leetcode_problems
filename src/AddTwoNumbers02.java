@@ -29,8 +29,8 @@ public class AddTwoNumbers02 {
 }
 
 class ListNode {
-      int val;
-      ListNode next;
+  int val;
+  ListNode next;
 
       ListNode() {}
 
@@ -45,10 +45,10 @@ class AddTwoNumbers02Test {
     ListNode l1 = new ListNode(2);
     ListNode l2 = new ListNode(4);
     ListNode l3 = new ListNode(3);
-    l1.next = l2;
-    l2.next = l3;
-//    l1 = new ListNode(4,l1);
-//    l1 = new ListNode(3,l1);
+//    l1.next = l2;
+//    l2.next = l3;
+    l1 = new ListNode(4, l1);
+    l1 = new ListNode(3, l1);
 
     ListNode b1 = new ListNode(5);
     ListNode b2 = new ListNode(6);
