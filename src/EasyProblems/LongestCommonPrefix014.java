@@ -1,7 +1,9 @@
+package EasyProblems;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class LongestCommonPrefix14 {
+public class LongestCommonPrefix014 {
   public static void main(String[] args) {
 
   }
@@ -30,7 +32,7 @@ public class LongestCommonPrefix14 {
     return result;
   }
 }
-class LongestCommonPrefix14Test {
+class LongestCommonPrefix014Test {
   @Test
   void solution() {
     String[] s1 = {"flower",
@@ -47,10 +49,10 @@ class LongestCommonPrefix14Test {
     String expected4 = "fayre";
     String expected5 = "maca";
 
-    Assertions.assertEquals(expected5, LongestCommonPrefix14.longestCommonPrefix(s5));
-    Assertions.assertEquals(expected4, LongestCommonPrefix14.longestCommonPrefix(s4));
-    Assertions.assertEquals(expected1, LongestCommonPrefix14.longestCommonPrefix(s1));
-    Assertions.assertEquals(expected2, LongestCommonPrefix14.longestCommonPrefix(s2));
-    Assertions.assertEquals(expected3, LongestCommonPrefix14.longestCommonPrefix(s3));
+    Assertions.assertEquals(expected5, LongestCommonPrefix014.longestCommonPrefix(s5));
+    Assertions.assertEquals(expected4, LongestCommonPrefix014.longestCommonPrefix(s4));
+    Assertions.assertEquals(expected1, LongestCommonPrefix014.longestCommonPrefix(s1));
+    Assertions.assertEquals(expected2, LongestCommonPrefix014.longestCommonPrefix(s2));
+    Assertions.assertEquals(expected3, LongestCommonPrefix014.longestCommonPrefix(s3));
   }
 }

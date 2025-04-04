@@ -1,7 +1,9 @@
+package EasyProblems;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class LongestSubstringWithoutRepeatingCharacters03 {
+public class LongestSubstringWithoutRepeatingCharacters003 {
   public static void main(String[] args) {
 
   }
@@ -26,7 +28,7 @@ public class LongestSubstringWithoutRepeatingCharacters03 {
     return count;
   }
 }
-class LengthOfLongestSubstringTest {
+class LengthOfLongestSubstring003Test {
   @Test
   void solution() {
     String s1 = "abcabcbb";
@@ -39,9 +41,9 @@ class LengthOfLongestSubstringTest {
     int expected3 = 3;
     int expected4 = 3;
 
-    Assertions.assertEquals(expected1, LongestSubstringWithoutRepeatingCharacters03.lengthOfLongestSubstring(s1));
-    Assertions.assertEquals(expected2, LongestSubstringWithoutRepeatingCharacters03.lengthOfLongestSubstring(s2));
-    Assertions.assertEquals(expected3, LongestSubstringWithoutRepeatingCharacters03.lengthOfLongestSubstring(s3));
-    Assertions.assertEquals(expected4, LongestSubstringWithoutRepeatingCharacters03.lengthOfLongestSubstring(s4));
+    Assertions.assertEquals(expected1, LongestSubstringWithoutRepeatingCharacters003.lengthOfLongestSubstring(s1));
+    Assertions.assertEquals(expected2, LongestSubstringWithoutRepeatingCharacters003.lengthOfLongestSubstring(s2));
+    Assertions.assertEquals(expected3, LongestSubstringWithoutRepeatingCharacters003.lengthOfLongestSubstring(s3));
+    Assertions.assertEquals(expected4, LongestSubstringWithoutRepeatingCharacters003.lengthOfLongestSubstring(s4));
   }
 }

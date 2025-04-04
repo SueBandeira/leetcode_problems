@@ -1,7 +1,9 @@
+package EasyProblems;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class PalindromeNumber9 {
+public class PalindromeNumber009 {
   public static boolean isPalindrome(int x) {
     String num;
     char[] vetorChar;
@@ -23,7 +25,7 @@ public class PalindromeNumber9 {
   }
 }
 
-class TestPalindromeNumber9 {
+class TestPalindromeNumber009 {
   @Test
   void testSolution() {
     int n1 = 121;
@@ -34,9 +36,9 @@ class TestPalindromeNumber9 {
     boolean expected2 = false;
     boolean expected3 = false;
 
-    Assertions.assertEquals(expected1, PalindromeNumber9.isPalindrome(n1));
-    Assertions.assertEquals(expected2, PalindromeNumber9.isPalindrome(n2));
-    Assertions.assertEquals(expected3, PalindromeNumber9.isPalindrome(n3));
+    Assertions.assertEquals(expected1, PalindromeNumber009.isPalindrome(n1));
+    Assertions.assertEquals(expected2, PalindromeNumber009.isPalindrome(n2));
+    Assertions.assertEquals(expected3, PalindromeNumber009.isPalindrome(n3));
   }
 
   //Assertions.assert

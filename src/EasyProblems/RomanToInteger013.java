@@ -1,10 +1,10 @@
+package EasyProblems;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.LinkedHashMap;
-
-public class RomanToInteger {
-  public static int romanToInt(String s) {
+public class RomanToInteger013 {
+  public static int romanToInt (String s) {
     char[] numerosRomanos = {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
     int[] inteiros = {1, 5, 10, 50, 100, 500, 1000};
     int resultado=0;
@@ -29,9 +29,9 @@ public class RomanToInteger {
     return 0;
   }
 }
-class TestRomanToInteger {
+class RomanToInteger013Test {
   @Test
-  void testSolution() {
+  void Solution() {
     String n0 = "C";
     String n1 = "III";
     String n2 = "LVIII";
@@ -42,9 +42,9 @@ class TestRomanToInteger {
     int expected2 = 58;
     int expected3 = 1994;
 
-    Assertions.assertEquals(expected0, RomanToInteger.romanToInt(n0));
-    Assertions.assertEquals(expected1, RomanToInteger.romanToInt(n1));
-    Assertions.assertEquals(expected2, RomanToInteger.romanToInt(n2));
-    Assertions.assertEquals(expected3, RomanToInteger.romanToInt(n3));
+    Assertions.assertEquals(expected0, RomanToInteger013.romanToInt(n0));
+    Assertions.assertEquals(expected1, RomanToInteger013.romanToInt(n1));
+    Assertions.assertEquals(expected2, RomanToInteger013.romanToInt(n2));
+    Assertions.assertEquals(expected3, RomanToInteger013.romanToInt(n3));
   }
 }

@@ -1,3 +1,5 @@
+package EasyProblems;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -6,7 +8,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Stack;
 
-public class ValidParentheses20 {
+public class ValidParentheses020 {
   public static void main(String[] args) {
 
     /*
@@ -42,7 +44,7 @@ public class ValidParentheses20 {
   }
 }
 
-class ValidParentheses20Test {
+class ValidParentheses020Test {
   @Test
   void solution() {
     LinkedHashMap<String, Boolean> teste = new LinkedHashMap<String, Boolean>();
@@ -54,7 +56,7 @@ class ValidParentheses20Test {
     teste.put("([}])", false);
 
     for (Map.Entry<String, Boolean> par : teste.entrySet()) {
-      boolean estado = ValidParentheses20.isValid(par.getKey());
+      boolean estado = ValidParentheses020.isValid(par.getKey());
       if (estado != par.getValue()) {
         System.out.printf("Avaliado = %s\nEsperado = %s\nRecebido = %s\n%s\n", par.getKey(), par.getValue(), estado, "_".repeat(14));
       }
